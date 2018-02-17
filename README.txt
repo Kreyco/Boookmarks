@@ -5,6 +5,6 @@ Versions:
 -Bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css
 	    https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js
 -JQuery: https://code.jquery.com/jquery-2.1.1.min.js
--GIT: 
+-GIT: https://github.com/Kreyco/Boookmarks
 
 This app is a bookmark controller. Adding, sorting and deleting bookmarks, using AngularJS, Bootstrap and GIT as a repository.
