@@ -1,0 +1,32 @@
+{
+  "name": "bookmarks",
+  "version": "1.0.0",
+  "description": "Project done with AngularJS, Bootstrap and a RESTService - Tutorial got from Quizzpot.com",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.3.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-uglify": "^0.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kreyco/Bookmarks.git"
+  },
+  "keywords": [
+    "angularjs",
+    "bootstrap",
+    "RESTService",
+    "bookmarks"
+  ],
+  "author": "Wilman Marin Duran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kreyco/Bookmarks/issues"
+  },
+  "homepage": "https://github.com/Kreyco/Bookmarks#readme"
+}

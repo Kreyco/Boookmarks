@@ -1,5 +1,5 @@
 App developed with AngularJS (Angular 1)
-Tutorial getting from: https://quizzpot.com/courses/introduccion-a-angular-js
+Tutorial gotten from: https://quizzpot.com/courses/introduccion-a-angular-js
 Versions: 
 -AngularJS: //ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js
 -Bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css

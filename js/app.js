@@ -1,38 +1,34 @@
 ( function () {
-    "use strict"
+    "use strict";
 
-    var  app = angular.module('Bookmarks',[
+    angular.module('Bookmarks',[
         //Dependencies here
         'ngResource'
     ])
-    .service('Category',function($http){
+    .service('Category',['$http',function($http){
         this.getAll = function(success,failure){
             $http.get('http://bookmarks-angular.herokuapp.com/api/categories')
                 .success(success,function (){
-                    console.log('success 1')
                 })
                 .error(failure, function () {
-                    console.log('error 1');
                 });
         };
         this.add = function (){ //Por hacer, para crear mas categorias en el servicio JSON
           $http.post('http://bookmarks-angular.herokuapp.com/api/categories')
               .succes( success,function (){
-                  console.log('success 2')
               })
               .error(failure, function () {
-                  console.log('error 2');
               });
         }
-    })
-    .factory('Bookmark',function($resource){
+    }])
+    .factory('Bookmark',['$resource', function($resource){
         return $resource('http://bookmarks-angular.herokuapp.com/api/bookmarks/:id',{
             id: '@id'
         },{
             update: {method: 'PUT'}
         });
-    })
-    .directive('bootstrapSelect',function(){
+    }])
+    .directive('bootstrapSelect',['$parse',function(){
         return {
             require : 'ngModel',
             link: function (scope, element, attrs, ngModel) {
@@ -42,14 +38,8 @@
                     model = attrs.ngModel;
 
                 $( element ).selectpicker();
-                console.log('My directive');
                 scope.$watch( collection,function(data){
-                    console.log('data =');
-                    console.log(data);
-
                     if(data){
-                        console.log('data true');
-                        console.log($( element ).find('option'));
                         $( element )
                             .find('option')
                             .remove();
@@ -62,14 +52,12 @@
                         });
                         $(element).append(html.join(''));
                         $(element).selectpicker('refresh');
-                    } else {
-                        console.log('data false');
                     }
                 });
             }
         }
-    })
-    .controller( 'MainController', function( $scope, Category, Bookmark ) {
+    }])
+    .controller( 'MainController', ['$scope','Category','Bookmark', function( $scope, Category, Bookmark ) {
         //Example app
         $scope.name = 'Jhon Doe';
 
@@ -140,7 +128,5 @@
         }
 
 
-    });
-
-    console.log( app );
+    }]);
 })();
